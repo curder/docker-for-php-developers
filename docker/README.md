@@ -70,3 +70,11 @@ docker build -t phpinfo:latest .
 
 docker images |grep phpinfo # 查看刚刚构建标签为`phpinfo`的镜像
 ```
+
+### docker cp
+
+将容器中的文件拷贝到宿主机
+
+```bash
+docker cp DOCKER_CONTINER:origin_path dist_path
+```
