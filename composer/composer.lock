@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fac753ae2702317b354e7eb283f28cbc",
+    "content-hash": "6d76f5a5a91fb98055e907fa34b03d28",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -121,6 +121,47 @@
                 }
             ],
             "time": "2020-08-18T23:57:15+00:00"
+        },
+        {
+            "name": "curder/docker-private-package",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:curder/docker-private-package.git",
+                "reference": "62bcaebd76d600a8efad052ac5875bce596eba63"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/curder/docker-private-package/zipball/62bcaebd76d600a8efad052ac5875bce596eba63",
+                "reference": "62bcaebd76d600a8efad052ac5875bce596eba63",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Curder\\DockerPrivatePackage\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "curder",
+                    "email": "q.curder@gmail.com"
+                }
+            ],
+            "description": "An exmaple private composer package",
+            "support": {
+                "source": "https://github.com/curder/docker-private-package/tree/master",
+                "issues": "https://github.com/curder/docker-private-package/issues"
+            },
+            "time": "2020-11-30T10:49:03+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -7505,7 +7546,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "curder/docker-private-package": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

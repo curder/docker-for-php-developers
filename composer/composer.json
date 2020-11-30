@@ -9,6 +9,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "curder/docker-private-package": "^1.0@dev",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
@@ -22,6 +23,12 @@
         "nunomaduro/collision": "^5.0",
         "phpunit/phpunit": "^9.3.3"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/curder/docker-private-package.git"
+        }
+    ],
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
