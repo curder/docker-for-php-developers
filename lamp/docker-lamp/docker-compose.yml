@@ -3,7 +3,19 @@ version: "3"
 services:
   app:
     build: .
+    container_name: app
     ports:
       - 8080:80
     volumes: 
       - .:/srv/app
+
+  mariadb:
+    image: mariadb:10.5.8
+    container_name: mariadb
+    ports:
+      - 13306:3306
+    environment: 
+      MYSQL_DATABASE: laravel
+      MYSQL_ALLOW_EMPTY_PASSWORD: "true"
+      MYSQL_USER: laravel
+      MYSQL_PASSWORD: "laravel"
