@@ -3,4 +3,4 @@
 - [Docker lamp](/lamp/docker-lamp/README.md)
 - [php composer](/composer/README.md)
 - [nginx](/nginx/nginx-fpm/README.md)
-- [Docker Laravel](/docker-app/REAMDE.md)
+- [Docker Laravel](/docker-app/README.md)
