@@ -10,6 +10,18 @@ RUN apt-get -yqq update \
     && chmod +x /usr/local/bin/composer \
     && composer --version
 
+
+WORKDIR /tmp
+COPY composer.json composer.lock auth.json /tmp/
+RUN composer install \
+    --no-interaction \
+    --no-plugins \
+    --no-scripts \
+    --prefer-dist \
+    && rm -rf composer.json composer.lock auth.json vendor/
+
+WORKDIR /var/www/html
+
 COPY . /var/www/html
 
 RUN composer install \
