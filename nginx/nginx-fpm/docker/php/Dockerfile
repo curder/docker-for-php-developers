@@ -1,5 +1,6 @@
-FROM php:7.4-fpm
+FROM php:7.4-fpm-alpine
 
+COPY docker/php/php.ini /usr/local/etc/php/php.ini
 COPY . /srv/app
 
 WORKDIR /srv/app
