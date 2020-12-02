@@ -15,3 +15,25 @@ docker run --rm -p 8080:80 docker-laravel
 ```bash
 ipconfig getifaddr en0 |pbcopy
 ```
+
+## 拷贝配置文件
+
+```
+cp .docker.env.example .docker.env
+```
+
+
+如果是开发环境建议配置：
+
+```
+APP_ENV=local
+PHP_OPCACHE_VALIDATE_TIMESTAMPS=1
+PHP_XDEBUG_DEFAULT_ENABLE=1
+```
+
+线上环境配置：
+```
+APP_ENV=production
+PHP_OPCACHE_VALIDATE_TIMESTAMPS=0
+PHP_XDEBUG_DEFAULT_ENABLE=0
+```

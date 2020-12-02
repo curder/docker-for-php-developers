@@ -1,8 +1,12 @@
 FROM php:7.4-apache
 
+ENV PHP_OPCACHE_VALIDATE_TIMESTAMPS=0 \
+    PHP_OPCACHE_MAX_ACCELERATED_FILES=8000 \
+    PHP_OPCACHE_MEMORY_CONSUMPTION=128
+
 RUN docker-php-ext-install pdo_mysql \
     && pecl install xdebug-2.9.8 redis \
-    && docker-php-ext-enable xdebug redis \
+    && docker-php-ext-enable xdebug redis opcache \
     && a2enmod rewrite
 
 COPY . /var/www/html
