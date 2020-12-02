@@ -15,5 +15,6 @@ use Illuminate\Support\Facades\Artisan;
 */
 
 Artisan::command('inspire', function () {
+    logger(\Illuminate\Support\Str::random());
     $this->comment(Inspiring::quote());
 })->purpose('Display an inspiring quote');
