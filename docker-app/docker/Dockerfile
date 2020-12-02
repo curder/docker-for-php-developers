@@ -7,7 +7,7 @@ RUN docker-php-ext-install pdo_mysql \
 
 COPY . /var/www/html
 COPY docker/vhost.conf /etc/apache2/sites-available/000-default.conf
-COPY docker/config/php/*.ini /usr/local/etc/php/conf.d/
+COPY docker/config/php/conf.d/*.ini /usr/local/etc/php/conf.d/
 COPY docker/start.sh /usr/local/bin/start
 
 RUN chown -R www-data:www-data /var/www/html \
