@@ -18,6 +18,7 @@ services:
       - redis
     environment:
       CONTAINER_ROLE: app
+      APP_ENV: local
 
   scheduler:
     image: laravel-www
