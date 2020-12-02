@@ -9,3 +9,10 @@ Route::get('/', function () {
 Route::get('/ping', function () {
     return ['message' => 'PONG'];
 });
+
+Route::get('podcasts', function () {
+
+    \App\Jobs\ProcessPodcast::dispatch();
+
+    return ['status' => 'OK'];
+});
