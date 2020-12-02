@@ -1,5 +1,5 @@
 - [Docker简单使用](/docker/README.md)
-- [Docker Composer简单使用](/docker-composer/REAME.md)
+- [Docker Composer简单使用](/docker-compose/README.md)
 - [Docker lamp](/lamp/docker-lamp/README.md)
 - [php composer](/composer/README.md)
 - [nginx](/nginx/nginx-fpm/README.md)
