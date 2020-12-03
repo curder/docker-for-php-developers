@@ -37,3 +37,11 @@ APP_ENV=production
 PHP_OPCACHE_VALIDATE_TIMESTAMPS=0
 PHP_XDEBUG_DEFAULT_ENABLE=0
 ```
+
+## 启动服务
+
+```
+docker-compose up -d --build
+```
+
+访问 `http://localhost:8080/procasts` redis将会处理一个 `ProcessPodcasts`事件，且在重试3次后失败，并记录到MySQL表中

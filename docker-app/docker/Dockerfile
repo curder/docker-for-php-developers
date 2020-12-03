@@ -17,12 +17,19 @@ RUN apt-get update -yqq \
     && docker-php-ext-enable xdebug redis opcache
 
 ADD . /var/www/html
+
+# PHP
 ADD docker/config/php/conf.d/*.ini /usr/local/etc/php/conf.d/
 ADD docker/config/php/php.ini /usr/local/etc/php/php.ini
+ADD docker/config/php/php-fpm.d/docker.conf /usr/local/etc/php-fpm.d/zz-docker.conf
+
+# Supervisor
 ADD docker/config/supervisor/supervisord.conf /etc/supervisor/supervisord.conf
+ADD docker/config/supervisor/conf.d/* /etc/supervisor/conf.d-available/
+
+# Nginx
 ADD docker/config/nginx/default /etc/nginx/sites-available/default
 ADD docker/config/nginx/h5bp /etc/nginx/h5bp
-ADD docker/config/php/php-fpm.d/docker.conf /usr/local/etc/php-fpm.d/zz-docker.conf
 ADD docker/start.sh /usr/local/bin/start
 
 RUN chown -R www-data:www-data /var/www/html \
